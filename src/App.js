@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { RecoilRoot } from "recoil";
+import "./App.css";
+import CharacterCounter from "./CharacterCounter";
+import Counter from "./Counter";
+import Counter1 from "./counter/Index";
+import HistoryState from "./history/index";
+import Product from "./recoil/Product";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div className="App">
+    <RecoilRoot>
+      <br />
+      <h3>Recoil Demo</h3>
+      <hr />
+      <br />
+      {/* <Counter />
+      <CharacterCounter />
+      <TodoList />
+
+      <Counter1 />
+      <br />
+      <br />
+      <HistoryState /> */}
+
+      <Product />
+
+    </RecoilRoot>
+  </div>;
 }
 
 export default App;
